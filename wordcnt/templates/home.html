@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- JQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 멋사 과제#2 </title>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class= "container">
+    <!-- 3가지 기능 -->
+    <!-- 1. 사용자에게 입력을 받는 공간 2. 어바웃이라는 페이지와 링크로 연결 3. 제출 버튼 -->
+    
+    <br>
+    <h1> WordCounter </h1>
+    <br>
+    <br>
+    <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="{%url 'about'%}">ABOUT</a></li>
+          
+          </ul>
+    <form action="{%url 'result'%}">
+    <textarea class="form-control" cols="40" rows="10" name="fulltext"></textarea> 
+        <br>
+        <input type="submit" class="btn btn-danger" value="Count">
+
+        <!-- 함수에서 submit된 데이터를 처리하고 result라는 웹페이지에 담겨 찍혀 나오게 된다 -->
+    </form>
+
+</div> <!-- 콘테이너 사용 -->
+
+</body>
+</html>
+
+
+
+

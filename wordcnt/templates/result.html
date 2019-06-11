@@ -1,0 +1,23 @@
+<h1>당신이 입력한 텍스트는 {{length}} 개로 구성되어 있습니다.</h1>
+
+<a href="{%url 'home'%}">HOME</a>
+<br>
+<h2> 입력한 텍스트 : </h2>
+<!-- 입력 받은 텍스트// 템플릿 변수 사용-->
+{{full}}
+
+<!--공백으로 자른 다음에 리스트에 넣고 리스트 길이를 반환 -->
+<h2> 단어 카운트 : </h2>
+{% comment %} {{dic}} 이라고 쓰면 너무 그대로 나옴 {% endcomment %}
+{% comment %} 반복문으로 순회하면서 첫 번째: 두 번째를 따로 출력해줘야 함 {% endcomment %}
+{% comment %} 빈사전= {} 을 만들고 순회하면서 특정 단어를 만나면 value를 1씩 증가시킨다 {% endcomment %}
+{% comment %} 빈 사전 {내: 1, 이름은: 1+1(두 번 만났을 때 증가), 민철이야: 1,} {% endcomment %}
+
+{% for word, howmany in dic %}
+    {{word}} : {{howmany}}
+<br>
+{% comment %} 단어: 몇번 {% endcomment %}
+
+{% endfor %}
+
+<!-- '단어' 단어가 나온 횟수 -->
